@@ -109,12 +109,6 @@ python src/atv_05_otimizacao_svm.py       # otimização do SVM
 
 O primeiro script gera o arquivo `star_classification_tratado.csv`, que é usado pelo segundo.
 
-## Possíveis melhorias
-
-- Estender a grade do SVM com valores maiores de `C` e com o parâmetro `gamma` no kernel `rbf`
-- Treinar o SVM com a base completa para uma comparação mais justa com os demais modelos
-- Analisar a matriz de confusão e a importância dos atributos no Random Forest
-- Testar o impacto da remoção do `redshift`, que costuma ser o atributo mais discriminativo
 
 ## Tecnologias
 
