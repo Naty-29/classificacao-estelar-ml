@@ -1,5 +1,4 @@
 import pandas as pd
-from sklearn.datasets import load_breast_cancer
 from sklearn.model_selection import train_test_split, GridSearchCV, StratifiedKFold
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
@@ -8,7 +7,12 @@ from sklearn.metrics import accuracy_score
 
 df = pd.read_csv('data/processed/star_classification_tratado.csv')
 
-COLUNA_ALVO = 'class'         
+# Colunas identificadoras: não carregam informação física do objeto
+id_cols = ['obj_ID', 'run_ID', 'rerun_ID', 'cam_col', 'field_ID',
+           'spec_obj_ID', 'plate', 'MJD', 'fiber_ID']
+df = df.drop(columns=id_cols)
+
+COLUNA_ALVO = 'class'
 AMOSTRA = 5000
 
  
